@@ -1,0 +1,37 @@
+<ion-header mode="md">
+  <ion-toolbar mode="md">
+    <ion-title color="dark">Sign In</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button mode="md" color="dark"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-grid>
+    <form [formGroup]="this.signinGroup" (ngSubmit)="this.signin()">
+      <ion-row class="ion-justify-content-center">
+        <ion-col size-xl="5" size-lg="5" size-md="6" size-sm="6">
+          <ion-item>
+            <ion-label color="dark" slot="start" position="stacked" mode="md">Email: </ion-label>
+            <ion-input formControlName="potentialEmail" type="email"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row class="ion-justify-content-center">
+        <ion-col size-xl="5" size-lg="5" size-md="6" size-sm="6">
+          <ion-item>
+            <ion-label color="dark" slot="start" position="stacked" mode="md">Password: </ion-label>
+            <ion-input formControlName="potentialPassword" type="password"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row class="ion-justify-content-end">
+        <ion-col offset="9">
+         <ion-button type="submit" fill="outline" mode="md" strong=true size="default" color="dark">Sign In</ion-button>
+        </ion-col>
+       </ion-row>
+    </form>
+  </ion-grid>
+</ion-content>

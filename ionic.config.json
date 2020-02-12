@@ -1,0 +1,7 @@
+{
+  "name": "FamilyFrameConnect",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
