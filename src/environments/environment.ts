@@ -3,16 +3,7 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false,
-  firebaseConfig: {
-    apiKey: "AIzaSyAWgdT0BTnkU80I9LZ9TVsqdpPi59gK5yw",
-    authDomain: "familyframeconnect.firebaseapp.com",
-    databaseURL: "https://familyframeconnect.firebaseio.com",
-    projectId: "familyframeconnect",
-    storageBucket: "familyframeconnect.appspot.com",
-    messagingSenderId: "46317049846",
-    appId: "1:46317049846:web:616ab9814714fccc6159d7"
-  }
+  production: false
 };
 
 /*
