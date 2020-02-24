@@ -1,0 +1,22 @@
+<ion-header mode="md">
+  <ion-toolbar mode="md">
+    <ion-title color="dark">Image Selector</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button mode="md" color="dark"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size-xl="3" size-lg="6" size-md="12" size="12" *ngFor="let img of this.currentUser.frameImages">
+        <ion-card (click)="this.selectImage(this.img)" button=true>
+          {{ img.title }}
+          <!-- <ion-img src=img.url></ion-img> -->
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+<router-outlet></router-outlet>

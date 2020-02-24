@@ -23,6 +23,15 @@ export class UserService {
     return this.frameUser;
   }
 
+  public findLoadedImage(imageID: string): FrameImage {
+    const userImages = this.frameUser.frameImages;
+    for(let idx = 0; idx < userImages.length; idx++) {
+      if(userImages[idx].id == Number(imageID)) {
+        return userImages[idx];
+      }
+    }
+  }
+
   public updateUser(userData: UserData): void {
     this.frameUser.id = userData.user_id;
     this.frameUser.name = userData.name;

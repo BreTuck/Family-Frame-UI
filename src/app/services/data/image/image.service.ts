@@ -34,6 +34,10 @@ private httpOptions = {
     return this.httpClient.get<ImageResult>(`${this.mainURL}${this.routeObj.getAll}`, this.httpOptions).toPromise();
   }
 
+  public getUserImage(imageID: number): Promise<ImageResult> {
+    return this.httpClient.get<ImageResult>(`${this.mainURL}${this.routeObj.get}${imageID.toString()}`, this.httpOptions).toPromise();
+  }
+
   public updateImage(): Promise<ImageResult> {
     return this.httpClient.put<ImageResult>(`${this.mainURL}${this.routeObj.update}`, this.httpOptions).toPromise();
   }
