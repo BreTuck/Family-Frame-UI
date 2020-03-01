@@ -8,15 +8,26 @@
 </ion-header>
 
 <ion-content>
+
+
   <ion-grid>
     <ion-row>
-      <ion-col size-xl="3" size-lg="6" size-md="12" size="12" *ngFor="let img of this.currentUser.frameImages">
-        <ion-card (click)="this.selectImage(this.img)" button=true>
-          {{ img.title }}
-          <!-- <ion-img src=img.url></ion-img> -->
-        </ion-card>
+      <ion-col size-xl="4" size-lg="5" size-md="12" size="12" *ngFor="let currentImage of this.currentUser.frameImages">
+        <ion-img (click)="this.selectImage(currentImage)" [src]="currentImage.url" height=400px [alt]="currentImage.title"></ion-img>
       </ion-col>
     </ion-row>
   </ion-grid>
+
+
+  <!-- <ion-grid>
+    <ion-row>
+      <ion-col size-xl="3" size-lg="6" size-md="12" size="12" *ngFor="let currentImage of this.currentUser.frameImages">
+        <ion-card (click)="this.selectImage(currentImage)" button=true>
+          {{ currentImage.title }}
+          <ion-img [src]=currentImage.url></ion-img>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid> -->
 </ion-content>
 <router-outlet></router-outlet>

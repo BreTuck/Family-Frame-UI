@@ -8,12 +8,17 @@ import { ImageManagerPageRoutingModule } from './image-manager-routing.module';
 
 import { ImageManagerPage } from './image-manager.page';
 
+import { ImageEditComponentModule } from '../../components/image-edit/image-edit.module';
+import { ImageShareComponentModule } from '../../components/image-share/image-share.module';
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    ImageManagerPageRoutingModule
+    ImageManagerPageRoutingModule,
+    ImageEditComponentModule,
+    ImageShareComponentModule
   ],
   declarations: [ImageManagerPage]
 })

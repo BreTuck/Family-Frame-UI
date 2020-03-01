@@ -1,0 +1,19 @@
+<ion-content>
+  <ion-grid>
+    <form [formGroup]="this.editImageForm" (ngSubmit)="this.updateImage()">
+      <ion-row class="ion-justify-content-start">
+        <ion-col size="8">
+          <ion-item>
+            <ion-label color="dark" position="stacked" mode="md">Image Title: </ion-label>
+            <ion-input formControlName="updatedTitle"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row class="ion-justify-content-center">
+        <ion-col>        
+          <ion-button type="submit" fill="outline" mode="md" strong=true size="default" color="dark">Update Image</ion-button>
+        </ion-col>   
+      </ion-row>
+    </form>
+    </ion-grid>
+</ion-content>

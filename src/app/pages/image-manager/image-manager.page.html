@@ -6,11 +6,41 @@
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
-<!-- size="4" size-xl="5" size-md="6" -->
+
+
 <ion-content>
+
+
   <ion-grid>
+    <ion-row class="ion-align-items-center">
+      <ion-col>
+        <ion-button id="leftBtn" (click)="this.rotateImage($event)" type="button" mode="md" size="large" fill="outline" strong="true" color="secondary">Rotate Left</ion-button>
+      </ion-col>
+      <ion-col size="6">
+        <h3>{{ this.currentImage.title }} from {{ this.currentImage.sender }}</h3>
+        <ion-img #imageToManage [src]="this.currentImage.url"></ion-img>
+      </ion-col>
+      <ion-col>
+        <ion-button id="rightBtn" (click)="this.rotateImage($event)" type="button" mode="md" size="large" fill="outline" strong="true" color="secondary">Rotate Right</ion-button>
+      </ion-col>
+    </ion-row>
     <ion-row class="ion-justify-content-center">
-      <ion-col size-xl="4" size-lg="6" size-md="12" size="12">
+      <ion-col size="3">
+        <ion-button type="button" mode="md" size="large" fill="outline" strong="true" color="danger">Delete</ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button (click)="this.openEditModal()" type="button" mode="md" size="large" fill="outline" strong="true" color="dark">Edit Title</ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button type="button" mode="md" size="large" fill="outline" strong="true" color="dark">Share</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+  <!-- <ion-grid>
+    <ion-row class="ion-justify-content-center">
+      <ion-col size-xl="6" size-lg="6" size-md="8" size="12">
         <ion-card>
           <ion-card-header>
             <ion-card-title>{{ this.currentImage.title }} from {{ this.currentImage.sender }}</ion-card-title>
@@ -30,5 +60,5 @@
         <ion-button type="button" mode="md" size="large" fill="outline" strong="true" color="dark">Share</ion-button>
       </ion-col>
     </ion-row>
-  </ion-grid>
+  </ion-grid> -->
 </ion-content>

@@ -38,8 +38,8 @@ private httpOptions = {
     return this.httpClient.get<ImageResult>(`${this.mainURL}${this.routeObj.get}${imageID.toString()}`, this.httpOptions).toPromise();
   }
 
-  public updateImage(): Promise<ImageResult> {
-    return this.httpClient.put<ImageResult>(`${this.mainURL}${this.routeObj.update}`, this.httpOptions).toPromise();
+  public updateImage(updatedImgData: any): Promise<ImageResult> {
+    return this.httpClient.put<ImageResult>(`${this.mainURL}${this.routeObj.update}`, updatedImgData, this.httpOptions).toPromise();
   }
 
   public deleteImage(): Promise<ImageResult> {
