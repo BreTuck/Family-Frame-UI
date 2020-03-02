@@ -7,7 +7,7 @@ import { AuthResult } from '../../models/APIResults';
   providedIn: 'root'
 })
 export class AuthService {
-  private mainURL: String = 'http://www.localhost:3000/user/';
+  private mainURL: String = 'http://67.176.4.127/user/';
   private routeObj: any = {
     signup: 'signup',
     signin: 'signin',
@@ -40,8 +40,8 @@ export class AuthService {
     return this.httpClient.post<AuthResult>(`${this.mainURL}${this.routeObj.signin}`, { email: potentialEmail, password: potentialPassword }).toPromise();
   }
   
-  public createUser(newName: string, newEmail: string, newPassword: string): Promise<AuthResult> {
-    return this.httpClient.post<AuthResult>(`${this.mainURL}${this.routeObj.signup}`, { name: newName, email: newEmail, password: newPassword }).toPromise();
+  public createUser(name: string, email: string, password: string): Promise<AuthResult> {
+    return this.httpClient.post<AuthResult>(`${this.mainURL}${this.routeObj.signup}`, { name: name, email: email, password: password }).toPromise();
   }
 
   public deauthenticate(): Promise<boolean> {

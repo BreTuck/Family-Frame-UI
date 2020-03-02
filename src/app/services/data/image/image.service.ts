@@ -6,7 +6,7 @@ import { ImageResult, ImageData } from '../../../models/APIResults';
   providedIn: 'root'
 })
 export class ImageService {
-private mainURL: string = 'http://www.localhost:3000/image/';
+private mainURL: string = 'http://67.176.4.127/image/';
 private routeObj: any = {
   'get': '/',
   'getAll': 'all',
